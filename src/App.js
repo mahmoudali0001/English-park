@@ -25,7 +25,9 @@ class App extends Component {
           <Route
             path="/contactus"
             element={
-              <p className="text-center text-orange-300 text-6xl">Contact Us</p>
+              <p className="text-center text-orange-300 text-6xl">
+                Contact Ussasas
+              </p>
             }
           />
         </Routes>
