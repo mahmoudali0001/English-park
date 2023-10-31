@@ -2,18 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-      "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+@layer components {
+  .drawerIcons {
+    @apply w-8 h-px bg-emerald-950;
   }
 
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-      monospace;
+  .spanTxtClass {
+    @apply text-[#4343435e] md:text-4xl sm:text-2xl text-lg font-bold;
+  }
+
+  .productsCard {
+    @apply md:col-span-1 col-span-1 text-white;
+  }
+}
+
+@layer utilities {
+  body {
+    font-family: "Cairo", sans-serif;
   }
 }
