@@ -5,7 +5,11 @@ import HeaderCardComponent from '../../Compononts/HeaderCard/HeaderCard';
 
 class HomePage extends Component {
   render() {
-    return <div className='text-center text-orange-300 text-6xl'>Home</div>;
+    return (
+      <div className='text-center text-gray-700 text-6xl bg-slate-300 '>
+        English Park
+      </div>
+    );
   }
 }
 
