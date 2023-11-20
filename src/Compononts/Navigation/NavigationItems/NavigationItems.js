@@ -11,7 +11,7 @@ const navigationItems = (props) => (
       Home
     </NavigationItem>
     <NavigationItem path="/shap" className="text-gray-500">
-      Shap
+      Shop
     </NavigationItem>
     <NavigationItem path="/aboutus" className="text-gray-500">
       About Us
