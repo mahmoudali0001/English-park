@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import { BsSearch, BsFillTelephoneFill, BsPerson } from "react-icons/bs";
 
@@ -15,12 +15,11 @@ const Toolbar = (props) => {
       <div className="flex gap-x-16">
         <Logo />
 
-        <nav className='md:inline-block hidden'>
+        <nav className="md:inline-block hidden">
           <NavigationItems />
         </nav>
       </div>
 
-<<<<<<< HEAD
       <div className="flex gap-x-5 justify-center items-center cursor-pointer">
         <div className="md:inline-block hidden">login</div>
         <BsPerson className="md:hidden inline-block" />
@@ -29,13 +28,6 @@ const Toolbar = (props) => {
           <BsFillTelephoneFill className="inline-block mr-2" />
           Call Us
         </Button>
-=======
-      <div className='flex gap-x-5 justify-center items-center cursor-pointer'>
-        <div className='md:inline-block hidden'>Login/Signup</div>
-        <BsPerson className='md:hidden inline-block' />
-        <BsSearch />
-        <BsCart3 className='text-orange-300' />
->>>>>>> 39d1d08a317bf19d4665265dfded55405c47b21f
       </div>
     </header>
   );
