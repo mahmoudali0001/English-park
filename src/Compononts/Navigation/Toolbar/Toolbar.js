@@ -9,7 +9,7 @@ import Button from "../../UI/Button/Button";
 
 const Toolbar = (props) => {
   return (
-    <header className="flex items-center justify-between z-30 | lg:px-3 md:px-2 px-1 | min-h-[48px] box-border shadow-md">
+    <header className="fixed w-full bg-white flex items-center justify-between z-30 | lg:px-3 md:px-2 px-1 | min-h-[48px] box-border shadow-md">
       <DrawerToggle clicked={props.drawerToggleClicked} />
 
       <div className="flex gap-x-16">

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .c .s,
+      .c .s::before {
+        background-color: #fff;
+      }
+      .c .s,
+      .c .w {
+        border-radius: 50%;
+      }
+      .c .s,
+      .c .w .number {
+        position: absolute;
+        cursor: pointer;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #333;
+        flex-direction: column;
+        gap: 30px;
+      }
+      .c,
+      .c .s {
+        justify-content: center;
+        display: flex;
+      }
+      .c {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        align-items: center;
+      }
+      .c .s {
+        width: 60px;
+        height: 60px;
+        z-index: 10;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #333;
+      }
+      .c .s::before {
+        content: "";
+        position: absolute;
+        top: -28px;
+        width: 20px;
+        height: 30px;
+        clip-path: polygon(50% 0, 15% 100%, 85% 100%);
+      }
+      .c .w {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: transform 3s ease-in-out;
+        background-color: #333;
+        overflow: hidden;
+        box-shadow: 0 0 0 5px #333, 0 0 0 15px #fff, 0 0 0 18px #111;
+      }
+      .c .w .number {
+        width: 49%;
+        height: 50%;
+        background: var(--clr);
+        transform-origin: bottom right;
+        transform: rotate(calc(60deg * var(--i)));
+        clip-path: polygon(0 0, 70% 0, 100% 100%, 0 75%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        user-select: none;
+      }
+      .c .w .number span {
+        position: relative;
+        transform: rotate(-45deg);
+        font-size: 15px;
+        font-weight: 500;
+        text-shadow: 3px 5px 2px rgba(0, 0, 0, 0.15);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="c">
+      <div class="s">spin</div>
+      <div class="w"></div>
+    </div>
+    <script>
+      var spined = true;
+      var data = [
+        { label: "Mobile", color: "#db7093", probability: 10 },
+        { label: "laptop", color: "#20b2aa", probability: 10 },
+        { label: "Bike", color: "#d63e92", probability: 4 },
+        { label: "PS5", color: "#daa520", probability: 5 },
+        { label: "Cars", color: "blue", probability: 0.01 },
+        { label: "100 RS", color: "red", probability: 79.99 },
+      ];
+
+      let w = document.querySelector(".w");
+      let s = document.querySelector(".s");
+      let value = Math.ceil(Math.random() * 3600);
+
+      data.map((userData, index) => {
+        var div = document.createElement("div");
+        var span = document.createElement("span");
+
+        div.className = "number";
+        div.setAttribute(
+          "style",
+          `--i:  ${index + 1}; --clr: ${userData.color}`
+        );
+
+        span.innerHTML = userData.label;
+
+        div.appendChild(span);
+        w.appendChild(div);
+      });
+
+      s.onclick = function () {
+        if (spined) {
+          spined = false;
+          w.style.transform = "rotate(" + value + "deg)";
+
+          value += Math.ceil(Math.random() * 3600);
+        }
+      };
+    </script>
+  </body>
+</html>

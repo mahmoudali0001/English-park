@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import SkillsSection from "../../Compononts/HomePageSections/SkillsSection";
 import Header from "../../Compononts/HomePageSections/Header";
+import CoursesSection from "../../Compononts/HomePageComponents/CoursesSection";
 
 class HomePage extends Component {
   render() {
@@ -10,6 +11,7 @@ class HomePage extends Component {
         <section className=" w-full">
           <Header />
           <SkillsSection />
+          <CoursesSection />
         </section>
       </div>
     );
