@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 
-import SkillsSection from "../../Compononts/HomePageSections/SkillsSection";
-import Header from "../../Compononts/HomePageSections/Header";
+import SkillsSection from "../../Compononts/HomePageComponents/SkillsSection";
+import Header from "../../Compononts/HomePageComponents/Header";
 import CoursesSection from "../../Compononts/HomePageComponents/CoursesSection";
+import AboutUsElements from "../../Compononts/HomePageComponents/AboutUsComponents/AboutUsELements";
 
 class HomePage extends Component {
   render() {
@@ -12,6 +13,7 @@ class HomePage extends Component {
           <Header />
           <SkillsSection />
           <CoursesSection />
+          <AboutUsElements />
         </section>
       </div>
     );
