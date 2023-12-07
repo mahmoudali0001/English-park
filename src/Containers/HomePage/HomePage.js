@@ -4,6 +4,7 @@ import SkillsSection from "../../Compononts/HomePageComponents/SkillsSection";
 import Header from "../../Compononts/HomePageComponents/Header";
 import CoursesSection from "../../Compononts/HomePageComponents/CoursesSection";
 import AboutUsElements from "../../Compononts/HomePageComponents/AboutUsComponents/AboutUsELements";
+import QualfiedTeachrsCards from "../../Compononts/HomePageComponents/QUAALFIED TEACHRS/QualfiedTeachrsCards";
 
 class HomePage extends Component {
   render() {
@@ -14,6 +15,7 @@ class HomePage extends Component {
           <SkillsSection />
           <CoursesSection />
           <AboutUsElements />
+          <QualfiedTeachrsCards />
         </section>
       </div>
     );
